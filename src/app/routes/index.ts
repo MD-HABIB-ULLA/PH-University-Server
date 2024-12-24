@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { AcademicSemestersRoutes } from "../models/academicSemester/academicSemester.router";
+import { AcademicSemestersRoutes } from "../models/academicSemester/academicSemester.routes";
 const router = Router();
 const moduleRoute = [
   { path: "/academic-semesters", route: AcademicSemestersRoutes },
