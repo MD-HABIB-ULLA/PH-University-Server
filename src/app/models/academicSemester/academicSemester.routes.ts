@@ -26,6 +26,6 @@ router.get(
   AcademicSemestersControllers.getSingleAcademicSemester
 );
 
-router.get("/", AcademicSemestersControllers.getAllAcademicSemesters);
+router.get("/", AcademicSemestersControllers.getAllAcademicSemesters  );
 
 export const AcademicSemestersRoutes = router;
