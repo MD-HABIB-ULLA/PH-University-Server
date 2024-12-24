@@ -8,7 +8,7 @@ const createAcademicSemester = catchAsync(async (req, res) => {
     req.body
   );
 
-  console.log(result);
+
   sendResponse(res, {
     statusCode: StatusCodes.OK,
     success: true,
@@ -34,7 +34,6 @@ const updateAcademicSemester = catchAsync(async (req, res) => {
 
 const getSingleAcademicSemester = catchAsync(async (req, res) => {
   const { semesterId } = req.params;
-  console.log(semesterId);
   const result =
     await AcademicSemesterService.getSingleAcademicSemesterFromDB(semesterId);
 

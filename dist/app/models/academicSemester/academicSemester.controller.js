@@ -19,7 +19,6 @@ const sendResponse_1 = __importDefault(require("../../utils/sendResponse"));
 const academicSemester_service_1 = require("./academicSemester.service");
 const createAcademicSemester = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const result = yield academicSemester_service_1.AcademicSemesterService.createAcademicSemesterIntoDB(req.body);
-    console.log(result);
     (0, sendResponse_1.default)(res, {
         statusCode: http_status_codes_1.StatusCodes.OK,
         success: true,
@@ -39,7 +38,6 @@ const updateAcademicSemester = (0, catchAsync_1.default)((req, res) => __awaiter
 }));
 const getSingleAcademicSemester = (0, catchAsync_1.default)((req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { semesterId } = req.params;
-    console.log(semesterId);
     const result = yield academicSemester_service_1.AcademicSemesterService.getSingleAcademicSemesterFromDB(semesterId);
     (0, sendResponse_1.default)(res, {
         statusCode: http_status_codes_1.StatusCodes.OK,
